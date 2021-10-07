@@ -1,0 +1,700 @@
+/* CSS Reset */
+
+html, body, blockquote, code, h1, h2, h3, h4, h5, h6, p, pre {
+    margin:0;
+    padding:0
+}
+button, fieldset, form, input, legend, textarea, select {
+    margin:0;
+    padding:0
+}
+fieldset {
+    border:0
+}
+a, a * {
+    cursor:pointer
+}
+div {
+    margin:0;
+    padding:0;
+    background-color:transparent;
+    text-align:left;
+}
+hr, img {
+    border:0
+}
+applet, iframe, object {
+    border:0;
+    margin:0;
+    padding:0
+}
+button, input[type=button], input[type=image], input[type=reset], input[type=submit], label {
+    cursor:pointer;
+}
+ul, li {
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+/* CSS Reset Ended */
+
+/* FONTS */
+
+.infolinks,
+h2,
+h3,
+li,
+p{
+    font-family: 'Lato', arial, sans-serif;
+}
+
+/* FONTS END */
+
+/* COLORS */
+
+:root{
+    --prim: #2C9169;
+    --second: #123b2a;
+    --sect: #e2cfb6;
+    --li: #fff;
+    --drk: #000;
+}
+
+/* ALL */
+
+html{
+    box-sizing: border-box;
+    font-family: georgia, 'times new roman', serif;
+    color: #000;
+    font-size: 1.125rem;
+}
+
+body{
+    background-color: #f3efe0;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3{
+    line-height: 1;
+    text-align: center;
+    padding: 2vh 1em;
+}
+
+h1,h2{
+    font-size: 2rem;
+}
+
+h4{
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+a{
+    text-decoration: none;
+    color: var(--li);
+    text-align: center;
+}
+
+main{
+    max-width: 40rem;
+    margin: 0 auto;
+}
+
+.name{
+    font-family: 'Radley';
+    text-transform: uppercase;
+}
+
+/* ALL END */
+
+/* NAV */
+/* change to nav in notebook for mobile */
+
+header{
+    text-align: center;
+    background-color: var(--prim);
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+}
+
+nav{
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    background-color: var(--prim);
+    width: 100%;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+}
+
+nav ul{
+    list-style: none;
+}
+
+nav li{
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+
+nav a{
+    color: var(--li);
+    font-family: 'Roboto Condensed';
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+}
+
+nav a:hover{
+    color: #ffdf0f;
+}
+
+.nav-toggle:checked ~ nav{
+    transform: scale(1,1);
+}
+
+.nav-toggle:checked ~ nav a{
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+}
+
+.nav-toggle{
+    display: none;
+}
+
+.nav-toggle-label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after{
+    display: block;
+    background: var(--li);
+    height: 2.5px;
+    width: 1.7em;
+    border-radius: 2px;
+    position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after{
+    content: '';
+    position: absolute;
+}
+
+.nav-toggle-label span::before{
+    bottom: 7px;
+}
+
+.nav-toggle-label span::after{
+    top: 7px;
+}
+
+/* NAV END */
+
+/* HOME */
+
+.home-intro h3{
+    font-style: italic;
+    padding: 0 0 3em;
+}
+
+/* services home */
+
+h4 a{
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--drk);
+}
+
+.homeserve{
+    padding: 0 1.5em;
+}
+
+.homeserve h5{
+    text-align: center;
+    padding: .5em;
+    font-size: 1rem;
+}
+
+.homeserve p{
+    text-align: center;
+    max-width: 100%;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: .5em;
+}
+
+.homeserve img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+    width: 60%;
+}
+
+.homeserve a{
+    margin-bottom: 1em;
+}
+
+.lg-screen-serv{
+    visibility: hidden;
+}
+
+.brownbg{
+    background-color: var(--sect);
+}
+
+/* info buttons */
+
+.infolinks{
+    display: flex;
+    justify-content: center;
+}
+
+.links{
+    padding: .75em 2em;
+    color: var(--li);
+    display: inline-block;
+}
+
+.infolinks-prim{
+    background: var(--prim);
+    border-radius: .3em;
+}
+
+.infolinks a:hover,
+.infolink a:focus{
+    background: var(--second);
+}
+
+/* about home */
+
+.about-home{
+    margin: 2em;
+}
+
+.about-home h4{
+    text-align: center;
+}
+
+.about-home p{
+    padding: .75em;
+}
+
+/* rates home */
+
+.rates-home{
+    margin: 0 1.5em; 
+    padding: 1em 0;
+}
+
+.rates-home h4{
+    text-align: center;
+}
+
+.rates-home li{
+    padding: .3em 3em .8em;
+}
+
+.rates-home p{
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* testamonials home */
+
+/* REMOVE BELOW ONE WHEN MORE TESTAMONIALS */
+.not-alot-tests{
+    display: none;
+}
+
+.tests-home{
+    margin: 2em;
+}
+
+.test-home h4, .tests-home p, .tests-home a{
+    padding: 1em;
+}
+
+/* HOME END */
+
+/* ABOUT */
+
+.about h1{
+    text-align: center;
+    padding-top: 1.75em;
+}
+
+.about img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+    max-width: 60%;
+}
+
+.about p{
+    max-width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 1em;
+    line-height: 1.5rem;
+   }
+
+/* ABOUT END */
+
+/* SERVICES */
+
+.services{
+    padding-top: 1.5em;
+}
+
+.services h1{
+    margin-top: .75em;
+}
+
+.serviceslist h2{
+    font-size: 1.5rem;
+    font-family: georgia, serif;
+}
+
+.serviceslist li{
+    list-style-type: disc;
+    padding-bottom: .75em;
+}
+
+ .services p{
+    text-align: center;
+    padding-bottom: 1em;
+ }
+
+.servicesbg{
+    background: var(--sect);
+}
+
+.serviceslist{
+    margin: 0 1.5em;
+    padding: 0 2.75em;
+}
+
+.rates{
+    padding: 2.5em;
+    max-width: 30rem;
+    margin: 0 auto;
+}
+
+.rates h2{
+    padding: 0;
+}
+.rates p{
+    text-align: center;
+}
+
+.rates p:nth-child(4){
+    font-size: 2rem;
+    padding:.3em 0 .5em;
+}
+
+.rates li{
+    list-style-type: none;
+}
+
+.payment li{
+    list-style-type: disc;
+    margin-left: 4em;
+}
+
+.rates-details{
+
+}
+
+/* SERVICES END */
+
+/* CONTACT */
+
+.contact h1{
+    padding-top: 1.75em;
+    text-align: center;
+}
+
+.contact li{
+    padding: 1em;
+}
+
+.contact a{
+    color: var(--drk);
+    text-decoration: underline;
+}
+
+.contact a:hover,
+.contact a:focus{
+    color: #0505ff;
+}
+
+.socialsm{
+    padding: 2em 1.3em;
+    color: var(--li);
+    display: inline-block;
+    width: 3rem;
+}
+
+/* CONTACT END */
+
+/* FOOTER */
+
+footer{
+    background-color: var(--prim);
+    padding: 1.5em;
+    color: var(--li);
+}
+
+footer a{
+    display: block;
+    padding: .5em;
+    text-decoration: underline;
+}
+
+footer a:hover,
+footer a:focus{
+    color: #003270;
+}
+
+footer .links{
+    padding: .6em 1.3em;
+}
+
+footer .infolinks-prim{
+    background: var(--li);
+    color: var(--drk);
+}
+
+.confooter a{
+    text-decoration: none;
+}
+
+.confooter a:hover,
+.confooter a:focus{
+    color: var(--li);
+    background: var(--drk);
+}
+
+footer p{
+    padding: .2em 0;
+    text-align: center;
+}
+
+footer p:nth-child(3){
+    padding-bottom: .75em;
+}
+
+.smlinks{
+    display: flex;
+    justify-content: center;
+}
+
+.social{
+    padding: .6em 1.3em;
+    color: var(--li);
+    display: inline-block;
+    width: 3rem;
+}
+
+/* FOOTER END */
+
+/* STYLING FOR LG SCREEN */
+@media screen and (min-width: 800px){
+    
+/* HEADER */
+
+    .nav-toggle-label{
+        display: none;
+    }
+
+    header{
+        display: grid;
+        grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+    }
+
+    header h1{
+        grid-column: 2 / span 1;
+    }
+
+    nav{
+        all: unset;
+        grid-column: 3 / 4;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    nav ul{
+        display: flex;
+    }
+
+    nav li{
+        margin-left: 2em;
+        margin-bottom: 0;
+    }
+
+    nav a{
+        opacity: 1;
+        transition:all 0.3s;
+    }
+
+    .active{
+        color: var(--drk);
+    }
+
+/* HOME */
+
+/* services home */
+
+    .homeserve{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-rows: minmax(250px auto);
+        justify-content: center;
+    }
+
+    .homeserve h5{
+        font-size: 1.3rem;
+    }
+
+    .sm-screen-serv{
+        display: none;
+    }
+
+    .lg-screen-serv{
+        visibility: visible;
+    }
+
+/* about home */
+
+    .about-home p{
+        max-width: 30rem;
+        margin-right: auto;
+        margin-left: auto;
+}
+
+/* rates home */
+
+    .rates-home ul{
+        max-width: 25rem;
+        text-align: center;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+/* testamonials home */
+
+    .tests-home p{
+        text-align: center;
+    }
+
+/* HOME END */
+
+/* ABOUT */
+
+   .about h1{
+        padding-top: 3em;
+   } 
+
+   .about img{
+        max-width: 40%;
+   }
+
+   
+
+/* ABOUT END */
+
+/* SERVICES */
+
+    .services h1{
+        padding-top: 1.5em;
+    }
+
+    .serviceslist ul{
+        display: table;
+        margin: 0 5em;
+    }
+
+    .rates ul{
+        max-width: 40rem;
+        padding-left: 6em;
+    }
+
+    .rates li{
+        padding: .2em;
+    }
+    
+    .payment li{
+        margin-left: 0;
+    }
+
+/* SERVICES END */
+
+/* CONTACT */
+
+    .contact{
+        padding-top: 2.8em;
+        text-align: center;
+    }
+
+/* CONTACT END */
+
+}
+
+@media screen and (min-width: 1000px){
+
+    main{
+        max-width: 55rem;
+        margin: 0 auto;
+    }
+
+    h4 a{
+        font-size: 2rem;
+    }
+
+    .home-intro img{
+        display: block;
+        max-width: 70%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    nav a{
+        font-size: 1.4rem;
+    }
+
+    .serviceslist ul{
+        display: table;
+        margin: 0 10em;
+    }
+
+
+
+
+
+
+
+
+}
