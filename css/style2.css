@@ -334,7 +334,6 @@ h4 a{
 
 .tests-home{
     padding: 1em;
-    max-width: 50%;
     margin-left: auto;
     margin-right: auto;
     line-height: 2em;
@@ -612,6 +611,10 @@ footer p{
 
 /* testamonials home */
 
+    .tests-home{
+    max-width: 80%;
+    }
+
     .tests-home p{
         text-align: center;
     }
@@ -695,8 +698,11 @@ footer p{
 
     .payment li{
     margin-left: 14em;
-}
+    }
 
+    .tests-home{
+    max-width: 50%;
+    }
 
 
 
