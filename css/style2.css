@@ -71,6 +71,7 @@ html{
 }
 
 body{
+    background-color: LemonChiffon;
     background-color: #f3efe0;
 }
 
@@ -98,7 +99,7 @@ h4{
 
 a{
     text-decoration: none;
-    color: var(--li);
+    color: var(--li, white);
     text-align: center;
 }
 
@@ -119,7 +120,7 @@ main{
 
 header{
     text-align: center;
-    background-color: var(--prim);
+    background-color: var(--prim, green);
     position: fixed;
     z-index: 999;
     width: 100%;
@@ -130,7 +131,7 @@ nav{
     text-align: left;
     top: 100%;
     left: 0;
-    background-color: var(--prim);
+    background-color: var(--prim, green);
     width: 100%;
     transform: scale(1, 0);
     transform-origin: top;
@@ -147,7 +148,7 @@ nav li{
 }
 
 nav a{
-    color: var(--li);
+    color: var(--li, white);
     font-family: 'Roboto Condensed';
     text-decoration: none;
     font-size: 1.2rem;
@@ -222,7 +223,7 @@ nav a:hover{
 h4 a{
     text-align: center;
     font-size: 1.5rem;
-    color: var(--drk);
+    color: var(--drk, black);
 }
 
 .homeserve{
@@ -255,12 +256,16 @@ h4 a{
     margin-bottom: 1em;
 }
 
+.homeserve li:nth-child(2){
+    padding-top: 3em;
+}
+
 .lg-screen-serv{
     visibility: hidden;
 }
 
 .brownbg{
-    background-color: var(--sect);
+    background-color: var(--sect, tan);
 }
 
 /* info buttons */
@@ -272,18 +277,18 @@ h4 a{
 
 .links{
     padding: .75em 2em;
-    color: var(--li);
+    color: var(--li, white);
     display: inline-block;
 }
 
 .infolinks-prim{
-    background: var(--prim);
+    background: var(--prim, green);
     border-radius: .3em;
 }
 
 .infolinks a:hover,
 .infolink a:focus{
-    background: var(--second);
+    background: var(--second, darkgreen);
 }
 
 /* about home */
@@ -322,7 +327,11 @@ h4 a{
 
 /* testamonials home */
 
-/* REMOVE BELOW ONE WHEN MORE TESTAMONIALS */
+.tests-home{
+    display: none;
+}
+
+/* REMOVE BELOW ONE WHEN MORE TESTAMONIALS 
 .not-alot-tests{
     display: none;
 }
@@ -333,7 +342,7 @@ h4 a{
 
 .test-home h4, .tests-home p, .tests-home a{
     padding: 1em;
-}
+}*/
 
 /* HOME END */
 
@@ -398,8 +407,6 @@ h4 a{
 
 .rates{
     padding: 2.5em;
-    max-width: 30rem;
-    margin: 0 auto;
 }
 
 .rates h2{
@@ -416,15 +423,17 @@ h4 a{
 
 .rates li{
     list-style-type: none;
+    max-width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: .4em;
 }
 
 .payment li{
     list-style-type: disc;
-    margin-left: 4em;
-}
-
-.rates-details{
-
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
 }
 
 /* SERVICES END */
@@ -441,7 +450,7 @@ h4 a{
 }
 
 .contact a{
-    color: var(--drk);
+    color: var(--drk, black);
     text-decoration: underline;
 }
 
@@ -452,7 +461,7 @@ h4 a{
 
 .socialsm{
     padding: 2em 1.3em;
-    color: var(--li);
+    color: var(--li, white);
     display: inline-block;
     width: 3rem;
 }
@@ -462,9 +471,9 @@ h4 a{
 /* FOOTER */
 
 footer{
-    background-color: var(--prim);
+    background-color: var(--prim, green);
     padding: 1.5em;
-    color: var(--li);
+    color: var(--li, white);
 }
 
 footer a{
@@ -483,8 +492,8 @@ footer .links{
 }
 
 footer .infolinks-prim{
-    background: var(--li);
-    color: var(--drk);
+    background: var(--li, white);
+    color: var(--drk, black);
 }
 
 .confooter a{
@@ -498,12 +507,9 @@ footer .infolinks-prim{
 }
 
 footer p{
-    padding: .2em 0;
-    text-align: center;
-}
-
-footer p:nth-child(3){
-    padding-bottom: .75em;
+    font-style: italic;
+    font-size: .75rem;
+    text-align: right;
 }
 
 .smlinks{
@@ -571,7 +577,6 @@ footer p:nth-child(3){
     .homeserve{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-auto-rows: minmax(250px auto);
         justify-content: center;
     }
 
@@ -638,16 +643,9 @@ footer p:nth-child(3){
     }
 
     .rates ul{
-        max-width: 40rem;
-        padding-left: 6em;
-    }
-
-    .rates li{
-        padding: .2em;
-    }
-    
-    .payment li{
-        margin-left: 0;
+        max-width: 60%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
 /* SERVICES END */
@@ -688,6 +686,10 @@ footer p:nth-child(3){
     .serviceslist ul{
         display: table;
         margin: 0 10em;
+    }
+
+    .payment-details li{
+        margin-left: 6em;
     }
 
 
