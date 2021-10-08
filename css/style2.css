@@ -327,22 +327,23 @@ h4 a{
 
 /* testamonials home */
 
-.tests-home{
-    display: none;
-}
-
-/* REMOVE BELOW ONE WHEN MORE TESTAMONIALS 
+/* REMOVE BELOW ONE WHEN MORE TESTAMONIALS */
 .not-alot-tests{
     display: none;
 }
 
 .tests-home{
-    margin: 2em;
+    padding: 1em;
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 2em;
 }
+
 
 .test-home h4, .tests-home p, .tests-home a{
     padding: 1em;
-}*/
+}
 
 /* HOME END */
 
@@ -432,8 +433,8 @@ h4 a{
 .payment li{
     list-style-type: disc;
     margin-right: auto;
-    margin-left: auto;
-    text-align: center;
+    margin-left: 6em;
+    
 }
 
 /* SERVICES END */
@@ -692,7 +693,9 @@ footer p{
         margin-left: 6em;
     }
 
-
+    .payment li{
+    margin-left: 14em;
+}
 
 
 
