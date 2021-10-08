@@ -348,6 +348,11 @@ h4 a{
 
 /* ABOUT */
 
+.location{
+    font-style: italic;
+    text-align: center;
+}
+
 .about h1{
     text-align: center;
     padding-top: 1.75em;
