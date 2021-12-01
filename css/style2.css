@@ -529,6 +529,12 @@ footer p{
     width: 3rem;
 }
 
+.larslink a{
+    text-decoration: none;
+    text-align: right;
+    display: inline;
+}
+
 /* FOOTER END */
 
 /* STYLING FOR LG SCREEN */
